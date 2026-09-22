@@ -7,12 +7,13 @@
 # Nom attendu : epsi-shopops-dev-athena-results-${var.student_id}
 resource "aws_s3_bucket" "athena_results" {
   # TODO : Déclarez le bucket ici en utilisant la variable student_id
-  
+  bucket = "epsi-shopops-dev-athena-results-${var.student_id}"
 }
 
 # 2. Bucket pour stocker les fichiers de données (Iceberg/Parquet) générés par dbt
 # Nom attendu : epsi-shopops-dev-dbt-data-${var.student_id}
 resource "aws_s3_bucket" "dbt_data" {
   # TODO : Déclarez le bucket ici en utilisant la variable student_id
-  
+  bucket = "epsi-shopops-dev-dbt-data-${var.student_id}"
+
 }
