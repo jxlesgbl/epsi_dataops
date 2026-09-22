@@ -1,0 +1,33 @@
+name: 'dbt_shopops'
+version: '1.0.0'
+config-version: 2
+profile: 'shopops'
+
+# Chemins standards dbt
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+# ==============================================================================
+# TODO Niveau 2 : Définir les stratégies de matérialisation de l'architecture Medallion
+# ==============================================================================
+models:
+  dbt_shopops:
+    
+    staging:
+      # TODO : Matérialiser tout le dossier 'staging' en tant que 'view' (vue logique)
+      
+    intermediate:
+      # TODO : Matérialiser tout le dossier 'intermediate' en tant que 'view'
+      
+    marts:
+      # TODO : Matérialiser tout le dossier 'marts' en tant que 'table'
+      # TODO : Configurer ces tables pour utiliser le format 'iceberg' (Spécifique à Athena)
+      # Indice : Cherchez "+table_type" dans la documentation de dbt-athena

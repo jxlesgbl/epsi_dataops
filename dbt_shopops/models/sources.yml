@@ -1,0 +1,16 @@
+version: 2
+
+# ==============================================================================
+# TODO Niveau 2 : Déclarer les sources de données brutes (Couche Bronze)
+# ==============================================================================
+sources:
+  - name: bronze
+    database: awsdatacatalog
+    # TODO : Renseignez ici le nom du schema/database AWS Glue contenant les données brutes 
+    # (Votre professeur vous fournira ce nom en début de TD)
+    schema: TODO_NOM_DU_SCHEMA_BRUT_FOURNI
+    tables:
+      - name: raw_customers
+      - name: raw_orders
+      - name: raw_payments
+      # TODO : Ajoutez les deux tables manquantes (voir le dictionnaire des données dans le README)

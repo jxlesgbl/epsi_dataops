@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: stg_payments
+    description: "Vue de nettoyage des paiements bruts."
+    
+    # ==============================================================================
+    # TODO Niveau 2 : Configuration de la quarantaine
+    # ==============================================================================
+    # TODO : Ajoutez la configuration 'store_failures: true' pour que les lignes 
+    # en erreur soient stockées dans une table d'audit au lieu d'être ignorées.
+    config:
+      # Votre code ici
+      
+    columns:
+      - name: payment_id
+        description: "Clé primaire du paiement"
+        tests:
+          - unique
+          - not_null
+          
+      - name: amount
+        description: "Montant du paiement"
+        tests:
+          # ==============================================================================
+          # TODO Niveau 2 : Règle de qualité financière
+          # ==============================================================================
+          # TODO : Utilisez un test du package dbt_expectations pour garantir 
+          # que ce montant n'est jamais inférieur à 0.
